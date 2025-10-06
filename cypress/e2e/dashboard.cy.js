@@ -1,5 +1,6 @@
 describe('Usuário logado na página de dashboard', () => {
     beforeEach(() => {
+        //adicionado fixtures alias especialistas
         cy.fixture('especialistas').as('especialistas')
         cy.login(Cypress.env('email'), Cypress.env('senha'))
     })
