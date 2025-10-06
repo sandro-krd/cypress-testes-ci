@@ -7,7 +7,8 @@ module.exports = defineConfig({
         "api_login": "http://localhost:8080/auth/login",
         "api_clinica": "http://localhost:8080/clinica",
         "api_especialista": "http://localhost:8080/especialista",
-        "requestMode": true
+        "requestMode": true,
+        
     },
     e2e: {
         setupNodeEvents(on, config) {
@@ -23,7 +24,7 @@ module.exports = defineConfig({
             json: false,
             timestamp: "mmddyyyy_HHMMss"
         },
-
         defaultCommandTimeout: 60000
     },
+    projectId: "vsxih5"
 });
