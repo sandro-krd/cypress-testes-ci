@@ -1,12 +1,14 @@
 describe('Página de cadastro', () => {
-
     beforeEach(() => {
         cy.visit('/');
     })
 
-    it('Clica no link "Cadastra-se" e redireciona para a página de cadastro da clínica', () => {
-        cy.get('[href="/cadastro"]').click();
-        cy.location('pathname').should('equal', '/cadastro')
+    context('Testes na página de cadastro', () => {
+        it('Clica no link "Cadastra-se" e redireciona para a página de cadastro da clínica', () => {
+            cy.get('[href="/cadastro"]').click();
+            cy.location('pathname').should('equal', '/cadastro')
+
+        })
     })
 
     context('Primeira parte da sessão de cadastro', () => {
@@ -25,8 +27,8 @@ describe('Página de cadastro', () => {
         })
     })
 
-    context('Sessão de cadastro completa', () => {
 
+    context('Sessão de cadastro completa', () => {
         it('Cadastra uma clínica', () => {
             cy.get('[href="/cadastro"]').click();
             cy.get('[data-test="inputNome"]').type('Catarina P');
@@ -47,4 +49,4 @@ describe('Página de cadastro', () => {
         })
     })
 
-});
+})
